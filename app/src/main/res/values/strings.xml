@@ -8,4 +8,9 @@
     <string name="onwaar">F</string>
     <string name="submit">Submit</string>
     <string name="hint">T/F</string>
+    <string name="zeroCorrect">You have 0 answers correct.</string>
+    <string name="oneCorrect">You have 1 answer correct.</string>
+    <string name="twoCorrect">You have 2 answers correct.</string>
+    <string name="threeCorrect">You have 3 answers correct.</string>
+    <string name="fourCorrect">You have 4 answers correct.</string>
 </resources>
