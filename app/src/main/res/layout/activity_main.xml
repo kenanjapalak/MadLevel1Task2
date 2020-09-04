@@ -7,12 +7,268 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/conjunction"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/conjunction"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+            android:id="@+id/rowOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/conjunction">
+
+        <TextView
+            android:id="@+id/rowOneColumnOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rowOneColumnOne"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toStartOf="@+id/rowOneColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/conjunction" />
+
+        <TextView
+            android:id="@+id/rowOneColumnTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rowOneColumnTwo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/rowOneColumnOne"
+            app:layout_constraintTop_toBottomOf="@+id/conjunction" />
+
+        <TextView
+            android:id="@+id/rowOneColumnThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rowOneColumnThree"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rowOneColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/conjunction" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rowOne">
+
+        <TextView
+            android:id="@+id/rowTwoColumnOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waar"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/rowTwoColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowOne" />
+
+        <TextView
+            android:id="@+id/rowTwoColumnTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/rowTwoColumnOne"
+            app:layout_constraintTop_toBottomOf="@+id/rowOne" />
+
+        <EditText
+            android:id="@+id/rowTwoColumnThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:gravity="center"
+            android:digits="TF"
+            android:maxLength="1"
+            android:hint="@string/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rowTwoColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowOne" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rowTwo">
+
+        <TextView
+            android:id="@+id/rowThreeColumnOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waar"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/rowThreeColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowTwo" />
+
+        <TextView
+            android:id="@+id/rowThreeColumnTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onwaar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/rowThreeColumnOne"
+            app:layout_constraintTop_toBottomOf="@+id/rowTwo" />
+
+        <EditText
+            android:id="@+id/rowThreeColumnThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:gravity="center"
+            android:digits="TF"
+            android:maxLength="1"
+            android:hint="@string/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rowThreeColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowTwo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rowThree">
+
+        <TextView
+            android:id="@+id/rowFourColumnOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onwaar"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/rowFourColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowThree" />
+
+        <TextView
+            android:id="@+id/rowFourColumnTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/rowFourColumnOne"
+            app:layout_constraintTop_toBottomOf="@+id/rowThree" />
+
+        <EditText
+            android:id="@+id/rowFourColumnThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:digits="TF"
+            android:maxLength="1"
+            android:gravity="center"
+            android:hint="@string/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rowFourColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowThree" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowFive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rowFour">
+
+        <TextView
+            android:id="@+id/rowFiveColumnOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onwaar"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/rowFiveColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowFour" />
+
+        <TextView
+            android:id="@+id/rowFiveColumnTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onwaar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/rowFiveColumnOne"
+            app:layout_constraintTop_toBottomOf="@+id/rowFour" />
+
+        <EditText
+            android:id="@+id/rowFiveColumnThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:digits="TF"
+            android:maxLength="1"
+            android:gravity="center"
+            android:hint="@string/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rowFiveColumnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/rowFour" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowSix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
